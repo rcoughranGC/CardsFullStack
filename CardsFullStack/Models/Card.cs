@@ -6,14 +6,15 @@ using Dapper.Contrib.Extensions;
 
 namespace CardsFullStack.Models
 {
-    [Table("Deck")]
-    public class Deck
+    [Table("Card")]
+    public class Card
     {
-        [ExplicitKey]
+        [Key]
+        public int id { get; set; }
         public string deck_id { get; set; }
-        public bool is_current { get; set; }
+        public string image { get; set; }
+        public string cardcode { get; set; }
         public string username { get; set; }
         public DateTime created_at { get; set; }
-
     }
 }
